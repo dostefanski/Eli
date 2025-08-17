@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #f7d5df 2%, #f092af 100%);
+    min-height: 100vh;
+}
+
+.header {
+         
+    /* Adicionando a imagem de fundo */
+    background: linear-gradient(rgba(240, 146, 175, 0.5), rgba(240, 146, 175, 0.5)), url(Assets/deretendo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    /* Definimos uma altura fixa para que a imagem seja visível */
+    height: 140px; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 40;
+
+
+
+
+    /*background: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    */
+}
+
+.header-content {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo {
+    width: 130px;
+    height: 130px;
+}
+
+.brand-info h1{
+    font-size: 2.0rem;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.brand-info p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #0a0b0c;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ec4899;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+.categories {
+    margin-bottom: 2rem;
+}
+
+.categories h2 {
+    font-size: 1.70rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding-bottom: 0.5rem;
+}
+
+.category-btn {
+    flex-shrink: 0;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: white;
+    color: #374151;
+    border: 1px solid #e5e7eb;
+}
+
+.category-btn:hover {
+    background: #f092af;
+}
+
+.category-btn.active {
+    background: #ff739b;
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.donut-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.donut-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.donut-details {
+    flex-grow: 1;
+    margin-bottom: 1.5rem; /* Adicionado espaço antes do rodapé */
+}
+
+.donut-emoji {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.donut-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.donut-description {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    min-height: 40px;
+}
+
+/* ESTILOS DA ESTRELA DE FAVORITO */
+.favorite-star {
+    font-size: 2rem; /* Tamanho maior para a estrela */
+    color: #d1d5db; /* Cor padrão (cinza) */
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.favorite-star:hover {
+    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+}
+
+.favorite-star.favorited {
+    color: #fbbf24; /* Cor quando favoritado (amarelo) */
+}
+
+
+.card-footer {
+    display: flex;
+    justify-content: space-between; /* Alinha preço e estrela nas pontas */
+    align-items: center;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid #f3f4f6;
+}
+
+/* Estilos do Rodapé */
+.footer {
+    background: #f7d5df;
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Altera para que os itens fiquem um abaixo do outro em telas pequenas */
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 640px) {
+    .footer-content {
+        flex-direction: row; /* Volta para a linha em telas maiores */
+    }
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    color: #6b7280;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #f092af;
+}
+
+.icon-emoji {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.text {
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
