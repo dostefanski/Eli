@@ -1,0 +1,64 @@
+/* Footer Styles - Compartilhado entre as páginas */
+.footer {
+    background: #f7d5df;
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 640px) {
+    .footer-content {
+        flex-direction: row;
+    }
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    color: #6b7280;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #f092af;
+}
+
+.icon-emoji {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.text {
+    font-weight: 500;
+}
+
+/* Estilo para footer simples (usado na index) */
+.footer p {
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+    color: #6b7280;
+}
+
+/* Estilo alternativo para footer com links sociais */
+.footer.simple {
+    background: rgba(31, 41, 55, 0.9);
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.footer.simple p {
+    color: white;
+    opacity: 0.8;
+}
